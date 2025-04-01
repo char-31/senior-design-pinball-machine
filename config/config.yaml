@@ -1,0 +1,70 @@
+#config_version=6
+
+switches:
+  s_left_flipper:
+    number: # number is from switch input
+    tags: left_flipper
+  s_right_flipper:
+    number:
+    tags: right_flipper
+
+coils:
+  c_flipper_left_main:
+    number: # number from switch input
+    default_pulse_ms: 10
+  c_flipper_left_hold:
+    number:
+    allow_enable: true
+  c_flipper_right_main:
+    number:
+    default_pulse_ms: 10
+  c_flipper_right_hold:
+    number:
+    allow_enable: true
+
+playfields:
+  playfield:
+    tags: default
+    default_source_device: None  # use None in steps before 8
+
+displays:
+  window:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+  init_done: welcome_slide
+  mode_attract_started: attract_started
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
+
+keyboard:
+  z:
+    switch: s_left_flipper
+  '/':
+    switch: s_right_flipper
