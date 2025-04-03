@@ -1,5 +1,9 @@
 #config_version=6
 
+game:
+  balls_per_game: 3
+  max_players: 1
+
 switches:
   s_left_flipper:
     number: # number is from switch input
@@ -7,6 +11,20 @@ switches:
   s_right_flipper:
     number:
     tags: right_flipper
+  s_trough1:
+    number:
+  s_start:
+    number:
+    tags: start
+  s_right_upperlane:
+    number:
+    tags: playfield_active
+  s_middle_upperlane:
+    number:
+    tags: playfield_active
+  s_left_upperlane:
+    number:
+    tags: playfield_active
 
 coils:
   c_flipper_left_main:
@@ -21,11 +39,14 @@ coils:
   c_flipper_right_hold:
     number:
     allow_enable: true
+  c_trough_eject:
+    number:
 
 playfields:
   playfield:
     tags: default
-    default_source_device: None  # use None in steps before 8
+    default_source_device: bd_trough
+    # ball save start event based on playfield_active
 
 displays:
   window:
@@ -50,21 +71,40 @@ slides:
 slide_player:
   init_done: welcome_slide
   mode_attract_started: attract_started
+  ball_started:
+    widgets:
+      type: text
+      text: PLAYER (number) BALL (ball)
 
 flippers:
   left_flipper:
     main_coil: c_flipper_left_main
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3
   right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    debug: true
+
+virtual_platform_start_active_switches:
+  - s_trough1
 
 keyboard:
+  1:
+    switch: s_trough1
+    toggle: true
   z:
     switch: s_left_flipper
   '/':
     switch: s_right_flipper
+  s:
+    switch: s_start
+  q:
+    switch: s_right_upperlane
