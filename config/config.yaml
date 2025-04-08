@@ -11,6 +11,12 @@ switches:
   s_right_flipper:
     number:
     tags: right_flipper
+  s_right_flipper_EOS:
+    number:
+    tags: right_EOS
+  s_left_flipper_EOS:
+    number:
+    tags: left_EOS
   s_trough1:
     number:
   s_start:
@@ -33,12 +39,14 @@ coils:
   c_flipper_left_hold:
     number:
     allow_enable: true
+    default_hold_power: 0.125
   c_flipper_right_main:
     number:
     default_pulse_ms: 10
   c_flipper_right_hold:
     number:
     allow_enable: true
+    default_hold_power: 0.125
   c_trough_eject:
     number:
 
@@ -63,28 +71,21 @@ slides:
       - type: rectangle
         width: 240
         height: 60
-  attract_started:
-    widgets:
-      - text: ATTRACT MODE
-        type: text
 
 slide_player:
   init_done: welcome_slide
-  mode_attract_started: attract_started
-  ball_started:
-    widgets:
-      type: text
-      text: PLAYER (number) BALL (ball)
 
 flippers:
   left_flipper:
     main_coil: c_flipper_left_main
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_EOS
   right_flipper:
     main_coil: c_flipper_right_main
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
+    eos_switch: s_right_flipper_EOS
 
 ball_devices:
   bd_trough:
@@ -108,3 +109,9 @@ keyboard:
     switch: s_start
   q:
     switch: s_right_upperlane
+
+modes:
+  - base
+  #- skillshot
+  #- multiball
+  #- train
