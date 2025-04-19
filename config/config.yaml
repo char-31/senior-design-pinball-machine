@@ -97,6 +97,7 @@ ball_devices:
 virtual_platform_start_active_switches:
   - s_trough1
 
+
 keyboard:
   1:
     switch: s_trough1
