@@ -59,18 +59,14 @@ playfields:
 displays:
   window:
     width: 800
-    height: 600
+    height: 480
 
 slides:
   welcome_slide:
     widgets:
-      - type: text
-        text: PINBALL!
-        font_size: 50
-        color: red
-      - type: rectangle
-        width: 240
-        height: 60
+      - type: image
+        image: welcome_intro
+        scale: 1
 
 slide_player:
   init_done: welcome_slide
@@ -96,7 +92,6 @@ ball_devices:
 
 virtual_platform_start_active_switches:
   - s_trough1
-
 
 keyboard:
   1:
