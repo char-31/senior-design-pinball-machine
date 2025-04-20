@@ -17,11 +17,30 @@ switches:
   s_left_flipper_EOS:
     number:
     tags: left_EOS
-  s_trough1:
-    number:
   s_start:
     number:
     tags: start
+  s_trough1:
+    number:
+    tags: trough_ball1
+  s_trough2:
+    number:
+    tags: trough_ball2
+  s_left_spinner:
+    number:
+    tags: left_spinner
+  s_right_spinner:
+    number:
+    tags: right_spinner
+  s_bottom_standup:
+    number:
+    tags: bottom_standup
+  s_middle_standup:
+    number:
+    tags: middle_standup
+  s_top_standup:
+    number:
+    tags: top_standup
   s_right_upperlane:
     number:
     tags: playfield_active
@@ -31,24 +50,120 @@ switches:
   s_left_upperlane:
     number:
     tags: playfield_active
+  s_train_rollover:
+    number:
+    tags: train_rollover
+  s_train_drop:
+    number:
+    tags: train_drop
+  s_left_outerlane:
+    number:
+    tags:
+  s_left_innerlane:
+    number:
+    tags:
+  s_right_outerlane:
+    number:
+    tags:
+  s_right_innerlane:
+    number:
+    tags:
+  s_top_bumper:
+    number:
+    tags:
+  s_middle_bumper:
+    number:
+    tags:
+  s_bottom_bumper:
+    number:
+    tags:
+  s_left_top_slingshot:
+    number:
+    tags:
+  s_left_bottom_slingshot:
+    number:
+    tags:
+  s_right_top_slingshot:
+    number:
+    tags:
+  s_right_bottom_slingshot:
+    number:
+    tags:
 
 coils:
   c_flipper_left_main:
     number: # number from switch input
-    default_pulse_ms: 10
-  c_flipper_left_hold:
-    number:
     allow_enable: true
     default_hold_power: 0.125
   c_flipper_right_main:
-    number:
-    default_pulse_ms: 10
-  c_flipper_right_hold:
     number:
     allow_enable: true
     default_hold_power: 0.125
   c_trough_eject:
     number:
+  c_bumper_top:
+    number:
+  c_bumper_middle:
+    number:
+  c_bumper_bottom:
+    number:
+  c_scoop_eject:
+    number:
+  c_left_slingshot:
+    number:
+  c_right_slingshot:
+    number:
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_EOS
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+  right_flipper:
+    main_coil: c_flipper_right_main
+    activation_switch: s_right_flipper
+    eos_switch: s_right_flipper_EOS
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    debug: true
+  bd_train_hold:
+    ball_switches: s_train_rollover
+    entrance_count_delay: 300ms
+    eject_coil: c_scoop_eject
+    eject_timeouts: 500ms
+
+autofire_coils:
+  left_slingshot_top:
+    coil: c_left_slingshot
+    switch: s_left_top_slingshot
+  left_slingshot_bottom:
+    coil: c_left_slingshot
+    switch: s_left_bottom_slingshot
+  right_slingshot_top:
+    coil: c_right_slingshot
+    switch: s_right_top_slingshot
+  right_slingshot_bottom:
+    coil: c_right_slingshot
+    switch: s_right_bottom_slingshot
+  top_bumper:
+    coil: c_bumper_top
+    switch: s_top_bumper
+  middle_bumper:
+    coil: c_bumper_middle
+    switch: s_middle_bumper
+  bottom_bumper:
+    coil: c_bumper_bottom
+    switch: s_bottom_bumper
 
 playfields:
   playfield:
@@ -71,27 +186,57 @@ slides:
 slide_player:
   init_done: welcome_slide
 
-flippers:
-  left_flipper:
-    main_coil: c_flipper_left_main
-    hold_coil: c_flipper_left_hold
-    activation_switch: s_left_flipper
-    eos_switch: s_left_flipper_EOS
-  right_flipper:
-    main_coil: c_flipper_right_main
-    hold_coil: c_flipper_right_hold
-    activation_switch: s_right_flipper
-    eos_switch: s_right_flipper_EOS
+sound_player:
+  init_done:
+    train_whistle:
+      action: play
 
-ball_devices:
-  bd_trough:
-    ball_switches: s_trough1
-    eject_coil: c_trough_eject
-    tags: trough, home, drain
-    debug: true
+machine_vars:
+  master_volume:
+    initial_value: 0.25   # Set this to any value you want
+    value_type: float
+    persist: true
+
+assets:
+  sounds:
+    default:
+      load: on_demand
+    music:
+      track: music
+    sfx:
+      track: sfx
+    voice:
+      track: voice
+
+sound_system:
+  buffer: 1024
+  channels: 1
+  enabled: true
+  frequency: 44100
+  tracks:
+    music:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 0.5
+    voice:
+      type: standard
+      simultaneous_sounds: 1
+      volume: 0.7
+    sfx:
+      type: standard
+      simultaneous_sounds: 8
+      volume: 0.5
+
+sounds:
+  train_whistle:
+    file: 00 - sfx - train-whistle-306031.wav
+  hail_purdue:
+    file: Purdue University Hail Purdue.flac
+    fade_in: 1.5s
 
 virtual_platform_start_active_switches:
   - s_trough1
+  - s_trough2
 
 keyboard:
   1:
@@ -111,3 +256,4 @@ modes:
   #- skillshot
   #- multiball
   #- train
+  #- service

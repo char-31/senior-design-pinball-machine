@@ -6,3 +6,9 @@ show_player:
       speed: 1
     #attract_light_show:
     #  speed: 4
+
+sound_player:
+  mode_attract_started:
+    hail_purdue:
+      action: play
+      loops: -1
