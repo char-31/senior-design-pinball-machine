@@ -80,7 +80,7 @@ switches:
     number: 1-0-8
     tags:
   s_top_bumper:
-    number: 1-0-21
+    number: 1-0-11
     tags:
   s_middle_bumper:
     number: 1-0-22
@@ -204,7 +204,7 @@ playfields:
 displays:
   window:
     width: 800
-    height: 480
+    height: 600
 
 slides:
   welcome_slide:
