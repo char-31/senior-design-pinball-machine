@@ -1,0 +1,65 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  priority: 110
+
+counters:
+  lb_upper_complete_count:
+    count_events: upperlanes_lit_complete
+    events_when_hit: upperlanes_done
+    starting_count: 1
+    direction: up
+    persist_state: false
+
+shots:
+  top_left_lane:
+    switch: s_left_upperlane
+    show_tokens:
+      light:
+  top_middle_lane:
+    switch: s_middle_upperlane
+    show_tokens:
+      light:
+  top_right_lane:
+    switch: s_right_upperlane
+    show_tokens:
+      light:
+
+shot_groups:
+  upperlanes:
+    shots: top_left_lane, top_middle_lane, top_right_lane
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events:
+      upperlanes_lit_complete: 1s
+
+variable_player:
+  mode_upperlane_combo_started:
+    pf_multiplier:
+      int: 1
+      action: set
+  upperlanes_done{count==2}:
+    pf_multiplier:
+      int: 2
+      action: set
+  upperanes_done{count==3}:
+    pf_multiplier:
+      int: 3
+      action: set
+  upperlanes_done{count==4}:
+    pf_multiplier:
+      int: 4
+      action: set
+  upperlanes_done{count==5}:
+    pf_multiplier:
+      int: 5
+      action: set
+  upperlanes_done{count==6}:
+    pf_multiplier:
+      int: 10
+      action: set
+  upperlanes_complete:
+    score: 1000 * current_player.pf_multiplier
+
+#light setup: https://missionpinball.org/latest/cookbook/top_lanes_with_multiplier/

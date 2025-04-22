@@ -28,7 +28,45 @@ slide_player:
         font_size: 50
 
 variable_player:
+  s_left_spinner_active:
+    score: 200
+  s_right_spinner_active:
+    score: 100
+  s_bottom_standup_active:
+    score: 500
+  s_middle_standup_active:
+    score: 500
+  s_top_standup_active:
+    score: 500
   s_right_upperlane_active:
     score: 100
-  s_left_flipper_active:
+  s_middle_upperlane_active:
+    score: 100
+  s_left_upperlane_active:
+    score: 100
+  s_train_drop_active:
     score: 1000
+  s_train_rollover_active:
+    score: 1000
+  s_left_outerlane_active:
+    score: 100
+  s_left_innerlane_active:
+    score: 100
+  s_right_outerlane_active:
+    score: 100
+  s_right_innerlane_active:
+    score: 100
+  s_top_bumper_active:
+    score: 200
+  s_middle_bumper_active:
+    score: 200
+  s_bottom_bumper_active:
+    score: 200
+  s_left_top_slingshot_active:
+    score: 100
+  s_left_bottom_slingshot_active:
+    score: 100
+  s_right_top_slingshot_active:
+    score: 100
+  s_right_bottom_slingshot_active:
+    score: 100

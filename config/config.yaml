@@ -1,15 +1,26 @@
 #config_version=6
 
+hardware:
+   platform: opp
+   driverboards: gen2
+
+opp:
+   ports: /dev/ttyACM0, /dev/ttyACM1
+
+psus:
+  default:
+    release_wait_ms: 50
+
 game:
   balls_per_game: 3
   max_players: 1
 
 switches:
   s_left_flipper:
-    number: # number is from switch input
+    number: 0-0-1 # number is from switch input
     tags: left_flipper
   s_right_flipper:
-    number:
+    number: 0-0-3
     tags: right_flipper
   s_right_flipper_EOS:
     number:
@@ -18,7 +29,7 @@ switches:
     number:
     tags: left_EOS
   s_start:
-    number:
+    number: 0-0-2
     tags: start
   s_trough1:
     number:
@@ -33,13 +44,13 @@ switches:
     number:
     tags: right_spinner
   s_bottom_standup:
-    number:
+    number: 0-0-27
     tags: bottom_standup
   s_middle_standup:
-    number:
+    number: 0-0-25
     tags: middle_standup
   s_top_standup:
-    number:
+    number: 0-0-26
     tags: top_standup
   s_right_upperlane:
     number:
@@ -78,10 +89,10 @@ switches:
     number:
     tags:
   s_left_top_slingshot:
-    number:
+    number: 0-0-19
     tags:
   s_left_bottom_slingshot:
-    number:
+    number: 0-0-18
     tags:
   s_right_top_slingshot:
     number:
@@ -113,6 +124,25 @@ coils:
     number:
   c_right_slingshot:
     number:
+
+servos:
+  servo1:
+    servo_min: 0.1
+    servo_max: 0.9
+    positions:
+      0.0: servo1_down
+      0.8: servo1_up
+    reset_position: 0.5
+    reset_events: reset_servo1
+    number:
+
+spinners:
+  ramp_spinner:
+    switch: s_left_spinner
+    active_ms: 500
+  return_spinner:
+    switch: s_right_spinner
+    active_ms: 500
 
 flippers:
   left_flipper:
@@ -190,10 +220,20 @@ sound_player:
   init_done:
     train_whistle:
       action: play
+  mode_attract_started:
+    hail_purdue:
+      action: play
+      loops: -1
+  mode_attract_stopped:
+    hail_purdue:
+      action: stop
+  mode_train_drop_started:
+    train_whistle:
+      action: play
 
 machine_vars:
   master_volume:
-    initial_value: 0.25   # Set this to any value you want
+    initial_value: 0.5   # Set this to any value you want
     value_type: float
     persist: true
 
@@ -225,7 +265,7 @@ sound_system:
     sfx:
       type: standard
       simultaneous_sounds: 8
-      volume: 0.5
+      volume: 0.7
 
 sounds:
   train_whistle:
@@ -242,6 +282,9 @@ keyboard:
   1:
     switch: s_trough1
     toggle: true
+  2:
+    switch: s_trough2
+    toggle: true
   z:
     switch: s_left_flipper
   '/':
@@ -250,9 +293,12 @@ keyboard:
     switch: s_start
   q:
     switch: s_right_upperlane
+  t:
+    switch: s_train_drop
 
 modes:
   - base
+  #- upperlane_combo
   #- skillshot
   #- multiball
   #- train
