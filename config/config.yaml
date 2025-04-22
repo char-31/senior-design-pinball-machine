@@ -53,19 +53,19 @@ switches:
     number: 0-0-26
     tags: top_standup
   s_right_upperlane:
-    number: 1-0-18 (2)
+    number: 1-0-18(2)
     tags: playfield_active
   s_middle_upperlane:
-    number: 1-0-17 (1)
+    number: 1-0-17(1)
     tags: playfield_active
   s_left_upperlane:
-    number: 1-0-16 (0)
+    number: 1-0-16(0)
     tags: playfield_active
   s_train_rollover:
-    number: 1-0-19 (3)
+    number: 1-0-19(3)
     tags: train_rollover
   s_train_drop:
-    number: 1-0-20 (4)
+    number: 1-0-20(4)
     tags: train_drop
   s_left_outerlane:
     number: 1-0-1
@@ -80,13 +80,13 @@ switches:
     number: 1-0-8
     tags:
   s_top_bumper:
-    number: 1-0-21 (5)
+    number: 1-0-21(5)
     tags:
   s_middle_bumper:
-    number: 1-0-22 (6)
+    number: 1-0-22(6)
     tags:
   s_bottom_bumper:
-    number: 1-0-23 (7)
+    number: 1-0-23(7)
     tags:
   s_left_top_slingshot:
     number: 0-0-19
@@ -125,16 +125,16 @@ coils:
   c_right_slingshot:
     number: 0-0-6
 
-servos:
-  servo1:
-    servo_min: 0.1
-    servo_max: 0.9
-    positions:
-      0.0: servo1_down
-      0.8: servo1_up
-    reset_position: 0.5
-    reset_events: reset_servo1
-    number: 1-0-10
+#servos:
+#  servo1:
+#    servo_min: 0.1
+#    servo_max: 0.9
+#    positions:
+#      0.0: servo1_down
+#      0.8: servo1_up
+#    reset_position: 0.5
+#    reset_events: reset_servo1
+#    number: 1-0-10
 
 spinners:
   ramp_spinner:
