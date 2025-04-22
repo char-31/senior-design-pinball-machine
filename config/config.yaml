@@ -53,7 +53,7 @@ switches:
     number: 0-0-26
     tags: top_standup
   s_right_upperlane:
-    number: 1-0-31
+    number: 1-0-39
     tags: playfield_active
   s_middle_upperlane:
     number: 1-0-32
@@ -198,7 +198,7 @@ autofire_coils:
 playfields:
   playfield:
     tags: default
-    default_source_device: None #bd_trough
+    default_source_device: None
     # ball save start event based on playfield_active
 
 displays:
