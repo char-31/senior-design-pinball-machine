@@ -23,25 +23,25 @@ switches:
     number: 0-0-3
     tags: right_flipper
   s_right_flipper_EOS:
-    number:
+    platform: virtual #number:
     tags: right_EOS
   s_left_flipper_EOS:
-    number:
+    platform: virtual #number:
     tags: left_EOS
   s_start:
     number: 0-0-2
     tags: start
   s_trough1:
-    number:
+    platform: virtual #number:
     tags: trough_ball1
   s_trough2:
-    number:
+    platform: virtual #number:
     tags: trough_ball2
   s_left_spinner:
-    number:
+    platform: virtual #number:
     tags: left_spinner
   s_right_spinner:
-    number:
+    platform: virtual #number:
     tags: right_spinner
   s_bottom_standup:
     number: 0-0-27
@@ -53,40 +53,40 @@ switches:
     number: 0-0-26
     tags: top_standup
   s_right_upperlane:
-    number:
+    platform: virtual #number:
     tags: playfield_active
   s_middle_upperlane:
-    number:
+    platform: virtual #number:
     tags: playfield_active
   s_left_upperlane:
-    number:
+    platform: virtual #number:
     tags: playfield_active
   s_train_rollover:
-    number:
+    platform: virtual #number:
     tags: train_rollover
   s_train_drop:
-    number:
+    platform: virtual #number:
     tags: train_drop
   s_left_outerlane:
-    number:
+    platform: virtual #number:
     tags:
   s_left_innerlane:
-    number:
+    platform: virtual #number:
     tags:
   s_right_outerlane:
-    number:
+    platform: virtual #number:
     tags:
   s_right_innerlane:
-    number:
+    platform: virtual #number:
     tags:
   s_top_bumper:
-    number:
+    platform: virtual #number:
     tags:
   s_middle_bumper:
-    number:
+    platform: virtual #number:
     tags:
   s_bottom_bumper:
-    number:
+    platform: virtual #number:
     tags:
   s_left_top_slingshot:
     number: 0-0-19
@@ -95,35 +95,35 @@ switches:
     number: 0-0-18
     tags:
   s_right_top_slingshot:
-    number:
+    platform: virtual #number:
     tags:
   s_right_bottom_slingshot:
-    number:
+    platform: virtual #number:
     tags:
 
 coils:
   c_flipper_left_main:
-    number: # number from switch input
+    platform: virtual #number: # number from switch input
     allow_enable: true
     default_hold_power: 0.125
   c_flipper_right_main:
-    number:
+    platform: virtual #number:
     allow_enable: true
     default_hold_power: 0.125
   c_trough_eject:
-    number:
+    platform: virtual #number:
   c_bumper_top:
-    number:
+    platform: virtual #number:
   c_bumper_middle:
-    number:
+    platform: virtual #number:
   c_bumper_bottom:
-    number:
+    platform: virtual #number:
   c_scoop_eject:
-    number:
+    platform: virtual #number:
   c_left_slingshot:
-    number:
+    platform: virtual #number:
   c_right_slingshot:
-    number:
+    platform: virtual #number:
 
 servos:
   servo1:
