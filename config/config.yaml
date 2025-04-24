@@ -141,16 +141,16 @@ coils:
   c_right_slingshot:
     number: 0-0-6
 
-servos:
-  servo1:
-    servo_min: 0.1
-    servo_max: 0.9
-    positions:
-      0.0: servo1_down
-      0.8: servo1_up
-    reset_position: 0.5
-    reset_events: reset_servo1
-    number: 1-0-10
+#servos:
+#  servo1:
+#    servo_min: 0.1
+#    servo_max: 0.9
+#    positions:
+#      0.0: servo1_down
+#      0.8: servo1_up
+#    reset_position: 0.5
+#    reset_events: reset_servo1
+#    number: 1-0-10
 
 spinners:
   ramp_spinner:

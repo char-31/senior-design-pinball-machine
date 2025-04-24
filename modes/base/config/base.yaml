@@ -69,3 +69,4 @@ variable_player:
   s_right_top_slingshot_active:
     score: 100
   s_right_bottom_slingshot_active:
+    score: 500
