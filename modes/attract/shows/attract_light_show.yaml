@@ -3,7 +3,51 @@
 - duration: 3
   lights:
     strip0: DFFF00
-
 - duration: 3
+  lights:
+    strip0: off
+- duration: 1
+  lights:
+    led_strip_0_light_7: red
+    led_strip_0_light_8: red
+    led_strip_0_light_6: red
+- duration: 1
+  lights:
+    led_strip_0_light_5: red
+    led_strip_0_light_4: red
+    led_strip_0_light_3: red
+- duration: 1
+  lights:
+    led_strip_0_light_9: red
+    led_strip_0_light_12: red
+    led_strip_0_light_13: red
+- duration: 1
+  lights:
+    led_strip_0_light_10: red
+    led_strip_0_light_11: red
+- duration: 1
+  lights:
+    led_strip_0_light_26: red
+    led_strip_0_light_25: red
+    led_strip_0_light_24: red
+    led_strip_0_light_2: red
+- duration: 1
+  lights:
+    led_strip_0_light_14: red
+    led_strip_0_light_15: red
+    led_strip_0_light_16: red
+- duration: 1
+  lights:
+    led_strip_0_light_23: red
+    led_strip_0_light_22: red
+    led_strip_0_light_21: red
+    led_strip_0_light_1: red
+- duration: 1
+  lights:
+    led_strip_0_light_20: red
+    led_strip_0_light_19: red
+    led_strip_0_light_17: red
+    led_strip_0_light_18: red
+- duration: 1
   lights:
     strip0: off
