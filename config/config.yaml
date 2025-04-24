@@ -184,18 +184,18 @@ ball_devices:
     debug: true
 
 autofire_coils:
-  left_slingshot_top:
-    coil: c_left_slingshot
-    switch: s_left_top_slingshot
-  left_slingshot_bottom:
-    coil: c_left_slingshot
-    switch: s_left_bottom_slingshot
-  right_slingshot_top:
-    coil: c_right_slingshot
-    switch: s_right_top_slingshot
-  right_slingshot_bottom:
-    coil: c_right_slingshot
-    switch: s_right_bottom_slingshot
+  #left_slingshot_top:
+  #  coil: c_left_slingshot
+  #  switch: s_left_top_slingshot
+  #left_slingshot_bottom:
+  #  coil: c_left_slingshot
+  #  switch: s_left_bottom_slingshot
+  #right_slingshot_top:
+  #  coil: c_right_slingshot
+  #  switch: s_right_top_slingshot
+  #right_slingshot_bottom:
+  #  coil: c_right_slingshot
+  #  switch: s_right_bottom_slingshot
   top_bumper:
     coil: c_bumper_top
     switch: s_top_bumper
@@ -209,7 +209,7 @@ autofire_coils:
 playfields:
   playfield:
     tags: default
-    default_source_device: None
+    default_source_device: bd_trough
     # ball save start event based on playfield_active
 
 displays:
@@ -306,6 +306,8 @@ keyboard:
     switch: s_right_upperlane
   t:
     switch: s_train_drop
+  l:
+    switch: s_right_top_slingshot
 
 modes:
   - base
