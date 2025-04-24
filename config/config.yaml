@@ -141,23 +141,6 @@ coils:
   c_right_slingshot:
     number: 0-0-6
 
-light_stripes: #yes there is a spelling mistake, make the same mistake
-  led_strip_0:
-    number_start: 0
-    count: 50
-    number_template: 0-0-{}
-    light_template:
-       type: rgb
-       tags: strip0
-
-light_player:
-  full_strip_on:
-    strip0: DFFF00
-  led_off:
-    led_strip_0: off
-  single_led_green:
-    led_strip_0_light_5: green #led_strip_0 is the name of the strip
-
 servos:
   servo1:
     servo_min: 0.1
@@ -245,10 +228,6 @@ slides:
       - type: image
         image: welcome_intro
         scale: 1
-  asset_status:
-    widgets:
-      - type: text
-        text: "LOADING ASSETS: (percent)%"
 
 slide_player:
   init_done: welcome_slide
