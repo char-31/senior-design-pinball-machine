@@ -182,10 +182,6 @@ ball_devices:
     eject_coil: c_trough_eject
     tags: trough, home, drain
     debug: true
-  bd_train_hold:
-    ball_switches: s_train_rollover
-    eject_coil: c_scoop_eject
-    eject_timeouts: 500ms
 
 autofire_coils:
   left_slingshot_top:
