@@ -229,11 +229,12 @@ slides:
 slide_player:
   init_done: welcome_slide
 
-led_strip_0:
-  number_start: 0
-  count: 50
-  number_template: 0-0-{}
-  light_template:
+light_stripes:
+  led_strip_0:
+    number_start: 0
+    count: 50
+    number_template: 0-0-{}
+    light_template:
       type: rgb
       tags: strip0
 
