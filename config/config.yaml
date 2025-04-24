@@ -189,7 +189,7 @@ flippers:
 
 ball_devices:
   bd_trough:
-    ball_switches: s_trough1, s_trough2
+    ball_switches: s_trough1 #, s_trough2
     mechanical_eject: true
     tags: trough, home, drain
     debug: true
@@ -219,7 +219,7 @@ autofire_coils:
   train_scoop:
     coil: c_scoop_eject
     switch: s_train_rollover
-    coil_pulse_delay: 300ms
+    #coil_pulse_delay: 300ms
 
 playfields:
   playfield:
@@ -317,10 +317,10 @@ virtual_platform_start_active_switches:
   - s_trough1
   - s_trough2
 
-player_vars:
-  initials:
-    value_type: str
-    initial_value: AAA
+#player_vars:
+#  initials:
+#    value_type: str
+#    initial_value: AAA
 
 keyboard:
   1:
@@ -344,7 +344,7 @@ keyboard:
 
 modes:
   - base
-  - high_score
+  #- high_score
   #- upperlane_combo
   #- skillshot
   #- multiball
