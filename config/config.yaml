@@ -184,7 +184,6 @@ ball_devices:
     debug: true
   bd_train_hold:
     ball_switches: s_train_rollover
-    entrance_count_delay: 300ms
     eject_coil: c_scoop_eject
     eject_timeouts: 500ms
 
