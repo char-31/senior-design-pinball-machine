@@ -1,7 +1,7 @@
 #show_version=6
 - duration: 3
   lights:
-    led_strip_0_light_1: blues
+    led_strip_0_light_1: blue
 - duration: 3
   lights:
     led_strip_0_light_1: red
