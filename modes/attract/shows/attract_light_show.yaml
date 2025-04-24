@@ -1,15 +1,9 @@
 #show_version=6
+
 - duration: 3
   lights:
-    led_strip_0_light_1: blue
+    strip0: DFFF00
+
 - duration: 3
   lights:
-    led_strip_0_light_1: red
-    led_strip_0_light_2: green
-    led_strip_0_light_3: red
-    led_strip_0_light_4: green
-    led_strip_0_light_5: red
-    led_strip_0_light_6: green
-    led_strip_0_light_8: red
-    led_strip_0_light_9: green
-    led_strip_0_light_10: red
+    strip0: off
