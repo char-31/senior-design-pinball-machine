@@ -43,15 +43,33 @@
     mission_pinball:
       widgets:
       - type: text
-        text: HIGH SCORE
+        text: HIGH SCORES
         font_size: 50
-        y: 60%
+        y: 70%
       - type: text
-        text: (machine|player1_score)
+        text: (machine|score1_label)- (machine|score1_value)
         number_grouping: true
         min_digits: 2
-        font_size: 50
+        font_size: 30
+        y: 50%
+      - type: text
+        text: (machine|score2_label)- (machine|score2_value)
+        number_grouping: true
+        min_digits: 2
+        font_size: 30
         y: 40%
+      - type: text
+        text: (machine|score3_label)- (machine|score3_value)
+        number_grouping: true
+        min_digits: 2
+        font_size: 30
+        y: 30%
+      - type: text
+        text: (machine|hits1_label)- (machine|hits1_value)
+        number_grouping: true
+        min_digits: 2
+        font_size: 30
+        y: 20%
 
 - duration: 3
   slides:

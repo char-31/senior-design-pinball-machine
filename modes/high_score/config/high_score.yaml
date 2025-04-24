@@ -1,12 +1,37 @@
 #config_version=6
 
+mode:
+  priority: 500
+  start_events: game_ending, start_high_score
+  use_wait_queue: true
+
 high_score:
-  categories:  !!omap
+  _overwrite: True
+  categories: !!omap
   - score:
-    - GRAND CHAMPION
-    - HIGH SCORE 1
-    - HIGH SCORE 2
-    - HIGH SCORE 3
-    - HIGH SCORE 4
+      - GRAND CHAMPION
+      - SECOND PLACE
+      - THIRD PLACE
+      - HIGH SCORE 3
+      - HIGH SCORE 4
   - loops:
-    - MOST LOOPS
+      - LOOP CHAMP
+  - hits:
+      - MOST HITS
+  defaults:
+    score:
+      - BRI: 4242
+      - GHK: 2323
+      - JK: 1337
+      - QC: 42
+      - MPF: 23
+    loops:
+      - JK: 42
+    hits:
+      - A: 1
+  vars:
+    loops:
+      - player: number
+    hits:
+      - player: number
+      - machine: credits_string

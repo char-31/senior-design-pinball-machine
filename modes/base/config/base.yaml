@@ -27,6 +27,9 @@ slide_player:
         anchor_y: bottom
         font_size: 50
 
+show_player:
+  mode_base_started: up_board_light_show
+
 variable_player:
   s_left_spinner_active:
     score: 200
