@@ -51,7 +51,7 @@ switches:
     type: NC
   s_middle_standup:
     number: 0-0-25
-    tags: middle_standup
+    tags: playfield_active, middle_standup
     type: NC
   s_top_standup:
     number: 0-0-26
@@ -133,13 +133,13 @@ coils:
     default_pulse_ms: 70
   c_bumper_top:
     number: 1-0-0
-    default_pulse_ms: 50
+    default_pulse_ms: 200
   c_bumper_middle:
     number: 1-0-7
-    default_pulse_ms: 50
+    default_pulse_ms: 200
   c_bumper_bottom:
     number: 1-0-6
-    default_pulse_ms: 50
+    default_pulse_ms: 200
   c_scoop_eject:
     number: 1-0-5
   c_left_slingshot:
