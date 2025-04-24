@@ -58,7 +58,7 @@ switches:
     tags: ptop_standup
     type: NC
   s_right_upperlane:
-    number: 1-0-48 #1-0-18 (2)
+    number: 1-0-18 (2)
     tags: playfield_active
     type: NC
   s_middle_upperlane:
