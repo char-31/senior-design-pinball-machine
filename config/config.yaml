@@ -71,7 +71,7 @@ switches:
     type: NC
   s_train_rollover:
     number: 1-0-56 #1-0-19 (3)
-    tags: playfield_active, train_rollover
+    tags: train_rollover
     type: NC
   s_train_drop:
     number: 1-0-64 #1-0-20 (4)
