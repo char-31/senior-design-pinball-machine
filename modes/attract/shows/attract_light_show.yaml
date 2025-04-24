@@ -1,17 +1,14 @@
 #show_version=6
-- duration: 1
+- duration: 3
+  lights: full_strip_on
+- duration: 3
   lights:
-    l_light2: 0
-    l_light1: ff
-- duration: 1
-  lights:
-    l_light1: 0
-    l_light2: ff
-- duration: 1
-  lights:
-    l_light2: 0
-    l_light3: ff
-- duration: 1
-  lights:
-    l_light3: 0
-    l_light2: ff
+    led_strip_0_light_1: blue
+    led_strip_0_light_2: green
+    led_strip_0_light_3: blue
+    led_strip_0_light_4: green
+    led_strip_0_light_5: blue
+    led_strip_0_light_6: green
+    led_strip_0_light_8: blue
+    led_strip_0_light_9: green
+    led_strip_0_light_10: blue

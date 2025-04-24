@@ -39,67 +39,83 @@ switches:
     tags: trough_ball2
   s_left_spinner:
     number: 0-0-24
-    tags: left_spinner
+    tags: playfield_active, left_spinner
+    type: NC
   s_right_spinner:
     number: 1-0-9
-    tags: right_spinner
+    tags: playfield_active, right_spinner
+    type: NC
   s_bottom_standup:
     number: 0-0-27
     tags: bottom_standup
+    type: NC
   s_middle_standup:
     number: 0-0-25
     tags: middle_standup
+    type: NC
   s_top_standup:
     number: 0-0-26
-    tags: top_standup
+    tags: ptop_standup
+    type: NC
   s_right_upperlane:
     number: 1-0-48 #1-0-18 (2)
-    tags: playfield_active
+    tags: playfield_active, upperlane
+    type: NC
   s_middle_upperlane:
     number: 1-0-40 #1-0-17 (1)
-    tags: playfield_active
+    tags: playfield_active, upperlane
+    type: NC
   s_left_upperlane:
     number: 1-0-32 #1-0-16 (0)
-    tags: playfield_active
+    tags: playfield_active, upperlane
+    type: NC
   s_train_rollover:
     number: 1-0-56 #1-0-19 (3)
-    tags: train_rollover
+    tags: playfield_active, train_rollover
+    type: NC
   s_train_drop:
     number: 1-0-64 #1-0-20 (4)
     tags: train_drop
   s_left_outerlane:
     number: 1-0-1
-    tags:
+    tags: playfield_active, outerlane
+    type: NC
   s_left_innerlane:
     number: 1-0-2
-    tags:
+    tags: playfield_active, innerlane
+    type: NC
   s_right_outerlane:
     number: 1-0-3
-    tags:
+    tags: playfield_active, outerlane
+    type: NC
   s_right_innerlane:
     number: 1-0-8
-    tags:
+    tags: playfield_active, innerlane
+    type: NC
   s_top_bumper:
     number: 1-0-72 #1-0-21 (5)
-    tags:
+    tags: top_bumper
   s_middle_bumper:
     number: 1-0-80 #1-0-22 (6)
-    tags:
+    tags: middle_bumper
   s_bottom_bumper:
     number: 1-0-88 #1-0-23 (7)
-    tags:
+    tags: bottom_bumper
   s_left_top_slingshot:
     number: 0-0-19
     tags:
   s_left_bottom_slingshot:
     number: 0-0-18
     tags:
+    type: NC
   s_right_top_slingshot:
     number: 0-0-17
     tags:
+    type: NC
   s_right_bottom_slingshot:
     number: 0-0-16
     tags:
+    type: NC
 
 coils:
   c_flipper_left_main:
@@ -125,16 +141,33 @@ coils:
   c_right_slingshot:
     number: 0-0-6
 
-#servos:
-#  servo1:
-#    servo_min: 0.1
-#    servo_max: 0.9
-#    positions:
-#      0.0: servo1_down
-#      0.8: servo1_up
-#    reset_position: 0.5
-#    reset_events: reset_servo1
-#    number: 1-0-10
+light_stripes: #yes there is a spelling mistake, make the same mistake
+  led_strip_0:
+    number_start: 0
+    count: 50
+    number_template: 0-0-{}
+    light_template:
+       type: rgb
+       tags: strip0
+
+light_player:
+  full_strip_on:
+    strip0: DFFF00
+  led_off:
+    led_strip_0: off
+  single_led_green:
+    led_strip_0_light_5: green #led_strip_0 is the name of the strip
+
+servos:
+  servo1:
+    servo_min: 0.1
+    servo_max: 0.9
+    positions:
+      0.0: servo1_down
+      0.8: servo1_up
+    reset_position: 0.5
+    reset_events: reset_servo1
+    number: 1-0-10
 
 spinners:
   ramp_spinner:
@@ -212,9 +245,14 @@ slides:
       - type: image
         image: welcome_intro
         scale: 1
+  asset_status:
+    widgets:
+      - type: text
+        text: "LOADING ASSETS: (percent)%"
 
 slide_player:
   init_done: welcome_slide
+  loading_assets: asset_status
 
 sound_player:
   init_done:
