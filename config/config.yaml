@@ -150,9 +150,18 @@ coils:
 #    positions:
 #      0.0: servo1_down
 #      0.8: servo1_up
-#    reset_position: 0.5
+#    reset_position: 0.8
 #    reset_events: reset_servo1
 #    number: 1-0-10
+
+#shows:
+#  train_hit:
+#    - duration: 2s
+#      events: reset_servo1
+#show_player:
+#  ball_ended:
+#    train_hit:
+#      loops: 1
 
 spinners:
   ramp_spinner:
@@ -181,7 +190,7 @@ flippers:
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2
-    eject_coil: c_trough_eject
+    mechanical_eject: true
     tags: trough, home, drain
     debug: true
 
@@ -207,6 +216,10 @@ autofire_coils:
   bottom_bumper:
     coil: c_bumper_bottom
     switch: s_bottom_bumper
+  train_scoop:
+    coil: c_scoop_eject
+    switch: s_train_rollover
+    coil_pulse_delay: 300ms
 
 playfields:
   playfield:
@@ -303,6 +316,11 @@ sounds:
 virtual_platform_start_active_switches:
   - s_trough1
   - s_trough2
+
+player_vars:
+  initials:
+    value_type: str
+    initial_value: AAA
 
 keyboard:
   1:

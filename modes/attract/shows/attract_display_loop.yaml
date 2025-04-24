@@ -64,12 +64,6 @@
         min_digits: 2
         font_size: 30
         y: 30%
-      - type: text
-        text: (machine|hits1_label)- (machine|hits1_value)
-        number_grouping: true
-        min_digits: 2
-        font_size: 30
-        y: 20%
 
 - duration: 3
   slides:
