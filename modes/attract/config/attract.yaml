@@ -6,3 +6,7 @@ show_player:
       speed: 1
     attract_light_show:
       speed: 4
+
+light_player:
+  full_strip_on:
+    strip0: DFFF00
