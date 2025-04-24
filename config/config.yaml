@@ -39,15 +39,15 @@ switches:
     tags: trough_ball2
   s_left_spinner:
     number: 0-0-24
-    tags: left_spinner
+    tags: playfield_active, left_spinner
     type: NC
   s_right_spinner:
     number: 1-0-9
-    tags: right_spinner
+    tags: playfield_active, right_spinner
     type: NC
   s_bottom_standup:
     number: 0-0-27
-    tags: bottom_standup
+    tags: playfield_active, bottom_standup
     type: NC
   s_middle_standup:
     number: 0-0-25
@@ -55,7 +55,7 @@ switches:
     type: NC
   s_top_standup:
     number: 0-0-26
-    tags: ptop_standup
+    tags: playfield_active, top_standup
     type: NC
   s_right_upperlane:
     number: 1-0-18
