@@ -216,9 +216,9 @@ autofire_coils:
   bottom_bumper:
     coil: c_bumper_bottom
     switch: s_bottom_bumper
-  train_scoop:
-    coil: c_scoop_eject
-    switch: s_train_rollover
+  #train_scoop:
+  #  coil: c_scoop_eject
+  #  switch: s_train_rollover
     #coil_pulse_delay: 300ms
 
 playfields:
