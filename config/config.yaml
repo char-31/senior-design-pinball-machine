@@ -252,7 +252,6 @@ slides:
 
 slide_player:
   init_done: welcome_slide
-  loading_assets: asset_status
 
 sound_player:
   init_done:
