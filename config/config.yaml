@@ -199,6 +199,10 @@ ball_devices:
     eject_targets: playfield
     eject_timeouts: 5s
     debug: true
+  bd_scoop:
+    eject_coil: c_scoop_eject
+    ball_switches: s_train_rollover
+    eject_timeouts: 2s
 
 
 autofire_coils:
@@ -324,10 +328,10 @@ virtual_platform_start_active_switches:
   - s_trough1
   - s_trough2
 
-#player_vars:
-#  initials:
-#    value_type: str
-#    initial_value: AAA
+player_vars:
+  initials:
+    value_type: str
+    initial_value: AAA
 
 keyboard:
   1:
@@ -351,6 +355,7 @@ keyboard:
 
 modes:
   - base
+  - hold1
   #- high_score
   #- upperlane_combo
   #- skillshot
