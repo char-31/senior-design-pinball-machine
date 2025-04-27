@@ -7,5 +7,6 @@ ball_holds:
   hold1:
     hold_devices: bd_scoop
     balls_to_hold: 1
+    enable_events: s_train_drop_active
     disable_events: end_hold
     release_one_events: end_hold
