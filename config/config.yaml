@@ -46,15 +46,15 @@ switches:
     tags: playfield_active, right_spinner
     type: NC
   s_bottom_standup:
-    number: 0-0-27 #1-0-31
+    number: 0-0-16 #1-0-31
     tags: playfield_active, bottom_standup
     type: NC
   s_middle_standup:
-    number: 0-0-25  #1-0-30
+    number: 0-0-17  #1-0-30
     tags: playfield_active, middle_standup
     type: NC
   s_top_standup:
-    number: 0-0-26 #1-0-29
+    number: 0-0-18 #1-0-29
     tags: playfield_active, top_standup
     type: NC
   s_right_upperlane:
@@ -100,16 +100,16 @@ switches:
     number: 1-0-23
     tags: bottom_bumper
   s_left_top_slingshot:
-    number: 0-0-16 #1-0-27
+    number: 0-0-25 #1-0-27
     tags: left_top_slingshot
   s_left_bottom_slingshot:
-    number: 0-0-18 #1-0-26
+    number: 0-0-24 #1-0-26
     tags: left_bottom_slingshot
   s_right_top_slingshot:
-    number: 0-0-24 #1-0-25
+    number: 0-0-26 #1-0-25
     tags: right_top_slingshot
   s_right_bottom_slingshot:
-    number: 0-0-17 #1-0-24
+    number: 0-0-27 #1-0-24
     tags: right_bottom_slingshot
 
 coils:
