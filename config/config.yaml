@@ -38,7 +38,7 @@ switches:
   #  number: 0-0-11
   #  tags: trough_ball2
   s_left_spinner:
-    number: 0-0-19
+    number: 1-0-28 #0-0-19
     tags: playfield_active, left_spinner
     type: NC
   s_right_spinner:
@@ -46,15 +46,15 @@ switches:
     tags: playfield_active, right_spinner
     type: NC
   s_bottom_standup:
-    number: 0-0-27
+    number: 1-0-31 #0-0-27
     tags: playfield_active, bottom_standup
     type: NC
   s_middle_standup:
-    number: 0-0-25
+    number: 1-0-30 #0-0-25
     tags: playfield_active, middle_standup
     type: NC
   s_top_standup:
-    number: 0-0-26
+    number: 1-0-29 #0-0-26
     tags: playfield_active, top_standup
     type: NC
   s_right_upperlane:
@@ -102,16 +102,16 @@ switches:
     number: 1-0-23
     tags: bottom_bumper
   s_left_top_slingshot:
-    number: 0-0-16
+    number: 1-0-27 #0-0-16
     tags:
   s_left_bottom_slingshot:
-    number: 0-0-18
+    number: 1-0-26 #0-0-18
     tags:
   s_right_top_slingshot:
-    number: 0-0-24
+    number: 1-0-25 #0-0-24
     tags:
   s_right_bottom_slingshot:
-    number: 0-0-17
+    number: 1-0-24 #0-0-17
     tags:
 
 coils:
@@ -140,9 +140,9 @@ coils:
   c_scoop_eject:
     number: 1-0-5
   c_left_slingshot:
-    number: 0-0-5
+    number: 1-0-2 #0-0-5
   c_right_slingshot:
-    number: 0-0-6
+    number: 1-0-3 #0-0-6
   c_turntable_right:
     number: 0-0-9
     default_pulse_power: 0.5
