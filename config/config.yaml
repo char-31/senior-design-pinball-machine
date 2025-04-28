@@ -107,45 +107,57 @@ switches:
   s_left_bottom_slingshot:
     number: 0-0-18
     tags:
-    type: NC
   s_right_top_slingshot:
     number: 0-0-17
     tags:
-    type: NC
   s_right_bottom_slingshot:
     number: 0-0-16
     tags:
-    type: NC
 
 coils:
   c_flipper_left_main:
     number: 0-0-3 # number from switch input
     allow_enable: true
     default_hold_power: 0.125
-    default_pulse_ms: 200
+    default_pulse_ms: 50
   c_flipper_right_main:
     number: 0-0-4
     allow_enable: true
     default_hold_power: 0.125
-    default_pulse_ms: 200
+    default_pulse_ms: 50
   c_trough_eject:
     number: 0-0-2
     default_pulse_ms: 70
   c_bumper_top:
     number: 1-0-0
-    default_pulse_ms: 200
+    default_pulse_ms: 50
   c_bumper_middle:
     number: 1-0-7
-    default_pulse_ms: 200
+    default_pulse_ms: 50
   c_bumper_bottom:
     number: 1-0-6
-    default_pulse_ms: 200
+    default_pulse_ms: 50
   c_scoop_eject:
     number: 1-0-5
   c_left_slingshot:
     number: 0-0-5
   c_right_slingshot:
     number: 0-0-6
+  c_turntable_right:
+    number: 1-0-15
+    default_pulse_power: 0.5
+    default_hold_power: 0.25
+#  c_turntable_left:
+#    number:
+
+coil_player:
+  ball_started:
+    c_turntable_right:
+      action: enable
+  s_train_drop_active:
+    c_turntable_right:
+      action: disable
+
 
 #servos:
 #  servo1:
@@ -157,6 +169,28 @@ coils:
 #    reset_position: 0.8
 #    reset_events: reset_servo1
 #    number: 1-0-10
+
+#diverters:
+#  d_diverter:
+#    debug: true
+#    feeder_devices: bd_trough
+#    targets_when_active: playfield
+#    targets_when_inactive: bd_scoop
+
+#motors:
+#  m_diverter:
+#    motor_left_output: c_turntable_left
+#    motor_right_output: c_turntable_right
+#    position_switches:  !!omap
+#    - pos2: s_turntable_start
+ #   - home: s_turntable_home
+ #   - pos1: s_turntable_end
+ #   reset_position: home
+ #   go_to_position:
+#      stop_turntable: ball_ended
+  #    go_pos1: pos1
+  #    go_pos2: pos2
+  #  debug: true
 
 #shows:
 #  train_hit:
@@ -193,7 +227,7 @@ flippers:
 
 ball_devices:
   bd_trough:
-    ball_switches: s_trough1, s_trough2
+    ball_switches: s_trough1 #, s_trough2
     eject_coil: c_trough_eject #mechanical_eject: true #eject_coil: c_trough_eject
     tags: trough, home, drain
     eject_targets: playfield
@@ -206,18 +240,18 @@ ball_devices:
 
 
 autofire_coils:
-  #left_slingshot_top:
-  #  coil: c_left_slingshot
-  #  switch: s_left_top_slingshot
-  #left_slingshot_bottom:
-  #  coil: c_left_slingshot
-  #  switch: s_left_bottom_slingshot
-  #right_slingshot_top:
-  #  coil: c_right_slingshot
-  #  switch: s_right_top_slingshot
-  #right_slingshot_bottom:
-  #  coil: c_right_slingshot
-  #  switch: s_right_bottom_slingshot
+  left_slingshot_top:
+    coil: c_left_slingshot
+    switch: s_left_top_slingshot
+  left_slingshot_bottom:
+    coil: c_left_slingshot
+    switch: s_left_bottom_slingshot
+  right_slingshot_top:
+    coil: c_right_slingshot
+    switch: s_right_top_slingshot
+  right_slingshot_bottom:
+    coil: c_right_slingshot
+    switch: s_right_bottom_slingshot
   top_bumper:
     coil: c_bumper_top
     switch: s_top_bumper
