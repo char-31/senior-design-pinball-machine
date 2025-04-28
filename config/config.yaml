@@ -62,7 +62,7 @@ switches:
     tags: playfield_active
     type: NC
   s_middle_upperlane:
-    number: 1-0-14
+    number: 1-0-18
     tags: playfield_active
     type: NC
   s_left_upperlane:
