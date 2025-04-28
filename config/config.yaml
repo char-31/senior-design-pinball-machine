@@ -144,7 +144,7 @@ coils:
   c_right_slingshot:
     number: 0-0-6
   c_turntable_right:
-    number: 1-0-15
+    number: 0-0-9
     default_pulse_power: 0.5
     default_hold_power: 0.25
 #  c_turntable_left:
