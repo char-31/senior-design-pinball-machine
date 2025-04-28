@@ -117,12 +117,12 @@ coils:
     number: 0-0-3 # number from switch input
     allow_enable: true
     default_hold_power: 0.25 # once flipper is held
-    default_pulse_ms: 150 # initial push
+    default_pulse_ms: 175 # initial push
   c_flipper_right_main:
     number: 0-0-4
     allow_enable: true
     default_hold_power: 0.25
-    default_pulse_ms: 150
+    default_pulse_ms: 175
   c_trough_eject:
     number: 0-0-2
     default_pulse_ms: 70
