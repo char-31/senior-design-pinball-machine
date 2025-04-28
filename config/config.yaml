@@ -38,7 +38,7 @@ switches:
   #  number: 0-0-11
   #  tags: trough_ball2
   s_left_spinner:
-    number: 1-0-28 #0-0-19
+    number: 0-0-19 #1-0-28
     tags: playfield_active, left_spinner
     type: NC
   s_right_spinner:
@@ -46,15 +46,15 @@ switches:
     tags: playfield_active, right_spinner
     type: NC
   s_bottom_standup:
-    number: 1-0-31 #0-0-27
+    number: 0-0-27 #1-0-31
     tags: playfield_active, bottom_standup
     type: NC
   s_middle_standup:
-    number: 1-0-30 #0-0-25
+    number: 0-0-25  #1-0-30
     tags: playfield_active, middle_standup
     type: NC
   s_top_standup:
-    number: 1-0-29 #0-0-26
+    number: 0-0-26 #1-0-29
     tags: playfield_active, top_standup
     type: NC
   s_right_upperlane:
@@ -79,11 +79,9 @@ switches:
   s_left_outerlane:
     number: 1-0-10
     tags: outerlane
-    type: NC
   s_left_innerlane:
     number: 1-0-9
     tags: innerlane
-    type: NC
   s_right_outerlane:
     number: 1-0-8
     tags: outerlane
@@ -102,24 +100,24 @@ switches:
     number: 1-0-23
     tags: bottom_bumper
   s_left_top_slingshot:
-    number: 1-0-27 #0-0-16
-    tags:
+    number: 0-0-16 #1-0-27
+    tags: left_top_slingshot
   s_left_bottom_slingshot:
-    number: 1-0-26 #0-0-18
-    tags:
+    number: 0-0-18 #1-0-26
+    tags: left_bottom_slingshot
   s_right_top_slingshot:
-    number: 1-0-25 #0-0-24
-    tags:
+    number: 0-0-24 #1-0-25
+    tags: right_top_slingshot
   s_right_bottom_slingshot:
-    number: 1-0-24 #0-0-17
-    tags:
+    number: 0-0-17 #1-0-24
+    tags: right_bottom_slingshot
 
 coils:
   c_flipper_left_main:
     number: 0-0-3 # number from switch input
     allow_enable: true
-    default_hold_power: 0.125
-    default_pulse_ms: 50
+    default_hold_power: 0.125 # once flipper is held
+    default_pulse_ms: 50 # initial push
   c_flipper_right_main:
     number: 0-0-4
     allow_enable: true
@@ -140,15 +138,13 @@ coils:
   c_scoop_eject:
     number: 1-0-5
   c_left_slingshot:
-    number: 1-0-2 #0-0-5
+    number: 0-0-5 #1-0-2
   c_right_slingshot:
-    number: 1-0-3 #0-0-6
+    number: 0-0-6 #1-0-3
   c_turntable_right:
     number: 0-0-9
     default_pulse_power: 0.5
     default_hold_power: 0.25
-#  c_turntable_left:
-#    number:
 
 coil_player:
   ball_started:
