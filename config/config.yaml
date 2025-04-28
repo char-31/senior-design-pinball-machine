@@ -128,19 +128,21 @@ coils:
     default_pulse_ms: 70
   c_bumper_top:
     number: 1-0-0
-    default_pulse_ms: 50
+    default_pulse_ms: 150
   c_bumper_middle:
     number: 1-0-7
-    default_pulse_ms: 50
+    default_pulse_ms: 150
   c_bumper_bottom:
     number: 1-0-6
-    default_pulse_ms: 50
+    default_pulse_ms: 150
   c_scoop_eject:
     number: 1-0-5
   c_left_slingshot:
     number: 0-0-5 #1-0-2
+    default_pulse_ms: 150
   c_right_slingshot:
     number: 0-0-6 #1-0-3
+    default_pulse_ms: 150
   c_turntable_right:
     number: 0-0-9
     default_pulse_power: 0.5
