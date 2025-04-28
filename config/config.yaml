@@ -22,27 +22,27 @@ switches:
   s_right_flipper:
     number: 0-0-3
     tags: right_flipper
-  s_right_flipper_EOS:
-    number: 0-0-8
-    tags: right_EOS
-  s_left_flipper_EOS:
-    number: 0-0-9
-    tags: left_EOS
+  #s_right_flipper_EOS:
+  #  number: 0-0-8
+  #  tags: right_EOS
+  #s_left_flipper_EOS:
+  #  number: 0-0-9
+  #  tags: left_EOS
   s_start:
     number: 0-0-2
     tags: start
   s_trough1:
     number: 0-0-10
     tags: trough_ball1
-  s_trough2:
-    number: 0-0-11
-    tags: trough_ball2
+  #s_trough2:
+  #  number: 0-0-11
+  #  tags: trough_ball2
   s_left_spinner:
-    number: 0-0-24
+    number: 0-0-19
     tags: playfield_active, left_spinner
     type: NC
   s_right_spinner:
-    number: 1-0-9
+    number: 1-0-2
     tags: playfield_active, right_spinner
     type: NC
   s_bottom_standup:
@@ -58,15 +58,15 @@ switches:
     tags: playfield_active, top_standup
     type: NC
   s_right_upperlane:
-    number: 1-0-18
+    number: 1-0-16
     tags: playfield_active
     type: NC
   s_middle_upperlane:
-    number: 1-0-17
+    number: 1-0-14
     tags: playfield_active
     type: NC
   s_left_upperlane:
-    number: 1-0-16
+    number: 1-0-17
     tags: playfield_active
     type: NC
   s_train_rollover:
@@ -77,19 +77,19 @@ switches:
     number: 1-0-20
     tags: train_drop
   s_left_outerlane:
-    number: 1-0-1
+    number: 1-0-10
     tags: outerlane
     type: NC
   s_left_innerlane:
-    number: 1-0-2
+    number: 1-0-9
     tags: innerlane
     type: NC
   s_right_outerlane:
-    number: 1-0-3
+    number: 1-0-8
     tags: outerlane
     type: NC
   s_right_innerlane:
-    number: 1-0-8
+    number: 1-0-3
     tags: innerlane
     type: NC
   s_top_bumper:
@@ -102,16 +102,16 @@ switches:
     number: 1-0-23
     tags: bottom_bumper
   s_left_top_slingshot:
-    number: 0-0-19
+    number: 0-0-16
     tags:
   s_left_bottom_slingshot:
     number: 0-0-18
     tags:
   s_right_top_slingshot:
-    number: 0-0-17
+    number: 0-0-24
     tags:
   s_right_bottom_slingshot:
-    number: 0-0-16
+    number: 0-0-17
     tags:
 
 coils:
@@ -356,7 +356,6 @@ sounds:
 
 virtual_platform_start_active_switches:
   - s_trough1
-  - s_trough2
 
 player_vars:
   initials:
@@ -366,9 +365,6 @@ player_vars:
 keyboard:
   1:
     switch: s_trough1
-    toggle: true
-  2:
-    switch: s_trough2
     toggle: true
   z:
     switch: s_left_flipper
