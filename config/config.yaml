@@ -149,9 +149,9 @@ coils:
     default_hold_power: 0.125
 
 coil_player:
-#  ball_started:
-#    c_turntable_right:
-#      action: enable
+  ball_started:
+    c_turntable_right:
+      action: enable
   ball_ended:
     c_turntable_right:
       action: disable
