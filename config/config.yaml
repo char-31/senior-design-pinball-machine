@@ -187,12 +187,12 @@ show_player:
   ball_ended:
     train_down:
       loops: 1
-    train_hit:
+    train_reset:
       loops: 1
   game_ended:
     train_down:
       loops: 1
-    train_hit:
+    train_reset:
       loops: 1
 
 spinners:
