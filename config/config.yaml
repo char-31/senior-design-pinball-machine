@@ -165,16 +165,16 @@ timed_switches:
     time: 3s
     events_when_active: end_game
 
-#servos:
-#  servo1:
-#    servo_min: 0.1
-#    servo_max: 0.9
-#    positions:
-#      0.0: servo1_down
-#      0.8: servo1_up
-#    reset_position: 0.8
-#    reset_events: reset_servo1
-#    number: 1-0-10
+servos:
+  servo1:
+    servo_min: 0.1
+    servo_max: 0.9
+    positions:
+      0.0: servo1_down
+      0.8: servo1_up
+    reset_position: 0.8
+    reset_events: reset_servo1
+    number: 1-0-10
 
 #diverters:
 #  d_diverter:
@@ -198,14 +198,17 @@ timed_switches:
   #    go_pos2: pos2
   #  debug: true
 
-#shows:
-#  train_hit:
-#    - duration: 2s
-#      events: reset_servo1
-#show_player:
-#  ball_ended:
-#    train_hit:
-#      loops: 1
+shows:
+  train_hit:
+    - duration: 2s
+      events: reset_servo1
+show_player:
+  ball_ended:
+    train_hit:
+      loops: 1
+  game_ended:
+    train_hit:
+      loops: 1
 
 spinners:
   ramp_spinner:
