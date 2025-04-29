@@ -149,9 +149,9 @@ coils:
     default_hold_power: 0.125
 
 coil_player:
-  ball_started:
-    c_turntable_right:
-      action: enable
+#  ball_started:
+#    c_turntable_right:
+#      action: enable
   ball_ended:
     c_turntable_right:
       action: disable
@@ -167,12 +167,12 @@ timed_switches:
 
 servos:
   servo1:
-    servo_min: 0.1
-    servo_max: 0.9
+#    servo_min: 0.1
+#    servo_max: 0.9
     positions:
       0.0: servo1_down
-      0.8: servo1_up
-    reset_position: 0.8
+      1.0: servo1_up
+    reset_position: 1.0
     reset_events: reset_servo1
     number: 1-0-10
 
