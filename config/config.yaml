@@ -145,8 +145,8 @@ coils:
     default_pulse_ms: 150
   c_turntable_right:
     number: 0-0-8
-    default_pulse_power: 0.5
-    default_hold_power: 0.25
+    default_pulse_power: 0.25
+    default_hold_power: 0.125
 
 coil_player:
   ball_started:
