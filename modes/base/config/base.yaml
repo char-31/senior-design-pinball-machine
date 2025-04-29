@@ -28,7 +28,11 @@ slide_player:
         font_size: 50
 
 show_player:
-  mode_base_started: up_board_light_show
+  mode_base_started:
+    sparkle light show:
+      speed: 4
+    up_board_light_show:
+      speed: 4
 
 variable_player:
   s_left_spinner_active:
