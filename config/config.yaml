@@ -191,7 +191,7 @@ show_player:
       loops: 1
   game_ended:
     train_down:
-      loops: 1s
+      loops: 1
     train_hit:
       loops: 1
 

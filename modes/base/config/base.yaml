@@ -29,7 +29,7 @@ slide_player:
 
 show_player:
   mode_base_started:
-    sparkle light show:
+    sparkle_light_show:
       speed: 4
     up_board_light_show:
       speed: 4
