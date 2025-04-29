@@ -152,6 +152,9 @@ coil_player:
   ball_started:
     c_turntable_right:
       action: enable
+  ball_ended:
+    c_turntable_right:
+      action: disable
   s_train_drop_active:
     c_turntable_right:
       action: disable
