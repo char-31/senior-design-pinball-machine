@@ -130,10 +130,10 @@ coils:
     number: 1-0-0
     default_pulse_ms: 150
   c_bumper_middle:
-    number: 1-0-7
+    number: 1-0-6
     default_pulse_ms: 150
   c_bumper_bottom:
-    number: 1-0-6
+    number: 1-0-7
     default_pulse_ms: 150
   c_scoop_eject:
     number: 1-0-5
@@ -144,7 +144,7 @@ coils:
     number: 0-0-6 #1-0-3
     default_pulse_ms: 150
   c_turntable_right:
-    number: 0-0-9
+    number: 0-0-8
     default_pulse_power: 0.5
     default_hold_power: 0.25
 
@@ -153,9 +153,6 @@ coil_player:
     c_turntable_right:
       action: enable
   ball_ended:
-    c_turntable_right:
-      action: disable
-  s_train_drop_active:
     c_turntable_right:
       action: disable
 
